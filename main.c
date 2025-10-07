@@ -3,16 +3,28 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void func (void)
+int sumTwo (int a, int b)
 {
-	int x;
-	printf("func x is at %p\n", &x);
+	return (a+b);
 }
 
+int square (int n)
+{
+	return (n*n);
+}
+
+int get_max (int x, int y)
+{
+	if (x>y)
+		return x;
+	else
+		return y;
+}
 int main(int argc, char *argv[]) {
-	int x;
-	printf("main x is at %p\n", &x);
-	func();
+	
+	printf("sumTwo result is %i\n", sumTwo (2,3));
+	printf ("square result is  %i\n", square (5));
+	printf ("get_max result is %i\n", get_max (10, 13));
 	
 	return 0;
 }
